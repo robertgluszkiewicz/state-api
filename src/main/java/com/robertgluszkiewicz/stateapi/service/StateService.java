@@ -29,7 +29,6 @@ public class StateService {
                 .sorted(Comparator.comparingInt(State::getPopulation).reversed())
                 .limit(STATESLIMIT)
                 .collect(Collectors.toList());
-        List<ApiStateDto> apiStateDtoList = stateMapper.mapToApiStateDtoList(threeBiggestStates);
-        return apiStateDtoList;
+        return stateMapper.mapToApiStateDtoList(threeBiggestStates);
     }
 }

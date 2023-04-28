@@ -17,32 +17,16 @@ public class State {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getPopulation() {
         return population;
     }
 
-    public void setPopulation(int population) {
-        this.population = population;
-    }
-
     public int getYearOfSourceData() {
         return yearOfSourceData;
-    }
-
-    public void setYearOfSourceData(int yearOfSourceData) {
-        this.yearOfSourceData = yearOfSourceData;
     }
 
     @Override

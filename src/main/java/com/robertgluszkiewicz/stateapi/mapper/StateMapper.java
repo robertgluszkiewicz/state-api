@@ -9,7 +9,6 @@ import com.robertgluszkiewicz.stateapi.domain.ApiStateDto;
 import com.robertgluszkiewicz.stateapi.domain.DataUsaStateDto;
 import com.robertgluszkiewicz.stateapi.domain.State;
 
-
 @Service
 public class StateMapper {
     public State mapToState(final DataUsaStateDto dataUsaStateDto) {
