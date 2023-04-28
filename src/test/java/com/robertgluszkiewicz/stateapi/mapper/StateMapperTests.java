@@ -27,7 +27,7 @@ public class StateMapperTests {
     List<ApiStateDto> apiStateDtoList = List.of(apiStateDto1, apiStateDto2);
 
     @Test
-    void shouldMapToState() {
+    public void shouldMapToState() {
         State result = stateMapper.mapToState(dataUsaStateDto1);
         assertEquals(state1.getId(), result.getId());
         assertEquals(state1.getName(), result.getName());
@@ -36,7 +36,7 @@ public class StateMapperTests {
     }
 
     @Test
-    void shouldMapToApiStateDto() {
+    public void shouldMapToApiStateDto() {
         ApiStateDto result = stateMapper.mapToApiStateDto(state1);
         assertEquals(apiStateDto1.getName(), result.getName());
         assertEquals(apiStateDto1.getPopulation(), result.getPopulation());
@@ -44,7 +44,7 @@ public class StateMapperTests {
     }
 
     @Test
-    void shouldMapToStateList() {
+    public void shouldMapToStateList() {
         List<State> result = stateMapper.mapToStateList(dataUsaStateDtoList);
         assertEquals(stateList.size(), result.size());
         assertEquals(stateList.get(0).getId(), result.get(0).getId());
@@ -52,7 +52,7 @@ public class StateMapperTests {
     }
 
     @Test
-    void shouldMapToApiStateDtoList() {
+    public void shouldMapToApiStateDtoList() {
         List<ApiStateDto> result = stateMapper.mapToApiStateDtoList(stateList);
         assertEquals(apiStateDtoList.size(), result.size());
         assertEquals(apiStateDtoList.get(0).getPopulation(), result.get(0).getPopulation());

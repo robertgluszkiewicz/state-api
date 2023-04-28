@@ -26,7 +26,7 @@ public class StateControllerTests {
     private StateService stateService;
 
     @Test
-    void shouldGetEmptyStates() throws Exception {
+    public void shouldGetEmptyStates() throws Exception {
         when(stateService.getStatesByPopulation()).thenReturn(List.of());
         mockMvc
                 .perform(MockMvcRequestBuilders
@@ -37,7 +37,7 @@ public class StateControllerTests {
     }
 
     @Test
-    void shouldGetStates() throws Exception {
+    public void shouldGetStates() throws Exception {
         List<ApiStateDto> apiStateDtoList =
                 List.of(
                         new ApiStateDto("name1", 100, 2001),
