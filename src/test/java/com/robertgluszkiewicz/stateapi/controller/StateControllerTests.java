@@ -14,6 +14,9 @@ import java.util.List;
 
 import static org.mockito.Mockito.when;
 
+import com.robertgluszkiewicz.stateapi.domain.ApiStateDto;
+import com.robertgluszkiewicz.stateapi.service.StateService;
+
 @SpringJUnitWebConfig
 @WebMvcTest(StateController.class)
 public class StateControllerTests {
@@ -25,7 +28,6 @@ public class StateControllerTests {
     @Test
     void shouldGetEmptyStates() throws Exception {
         when(stateService.getStatesByPopulation()).thenReturn(List.of());
-
         mockMvc
                 .perform(MockMvcRequestBuilders
                         .get("/api/v1/states")
@@ -44,7 +46,6 @@ public class StateControllerTests {
                 );
 
         when(stateService.getStatesByPopulation()).thenReturn(apiStateDtoList);
-
         mockMvc
                 .perform(MockMvcRequestBuilders
                         .get("/api/v1/states")
