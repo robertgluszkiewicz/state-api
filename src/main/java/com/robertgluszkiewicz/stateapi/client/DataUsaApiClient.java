@@ -15,7 +15,6 @@ import org.springframework.web.util.UriComponentsBuilder;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.robertgluszkiewicz.stateapi.domain.DataUsaStateDto;
-import com.robertgluszkiewicz.stateapi.exception.DataUsaApiResponseException;
 
 @Component
 public class DataUsaApiClient {
