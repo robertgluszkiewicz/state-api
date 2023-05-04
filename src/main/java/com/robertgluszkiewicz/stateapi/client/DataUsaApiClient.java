@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import com.robertgluszkiewicz.stateapi.exception.DataUsaApiException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -40,10 +40,9 @@ public class DataUsaApiClient {
                 .build()
                 .encode()
                 .toUri();
-        ResponseEntity<String> responseEntity = restTemplate.getForEntity(uri, String.class);
-
-        return Optional.ofNullable(responseEntity.getBody()).orElseThrow(
-                () -> new DataUsaApiResponseException("Data Usa Api error"));
+        String response = restTemplate.getForEntity(uri, String.class).getBody();
+        return Optional.ofNullable(response).orElseThrow(
+                () -> new DataUsaApiException());
     }
 
     public List<DataUsaStateDto> getStates() {
@@ -63,7 +62,7 @@ public class DataUsaApiClient {
             }
             return dataUsaStateDtoList;
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new DataUsaApiException();
         }
     }
 }
