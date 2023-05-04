@@ -14,7 +14,7 @@ import com.robertgluszkiewicz.stateapi.repository.StateRepository;
 
 @Service
 public class StateService {
-    private static final int STATESLIMIT = 3;
+    private static final int STATES_LIMIT = 3;
     private final StateRepository stateRepository;
     private final StateMapper stateMapper;
 
@@ -25,10 +25,10 @@ public class StateService {
     }
 
     public List<ApiStateDto> getStatesByPopulation() {
-                List<State> threeBiggestStates = stateRepository.getAllStates().stream()
+                List<State> limitedStatesDesc = stateRepository.getAllStates().stream()
                 .sorted(Comparator.comparingInt(State::getPopulation).reversed())
-                .limit(STATESLIMIT)
+                .limit(STATES_LIMIT)
                 .collect(Collectors.toList());
-        return stateMapper.mapToApiStateDtoList(threeBiggestStates);
+        return stateMapper.mapToApiStateDtoList(limitedStatesDesc);
     }
 }

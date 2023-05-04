@@ -19,7 +19,7 @@ import com.robertgluszkiewicz.stateapi.exception.DataUsaApiResponseException;
 
 @Component
 public class DataUsaApiClient {
-    private static final String DATAUSAAPIENDPOINT = "https://datausa.io/api/data";
+    private static final String DATA_USA_API_ENDPOINT = "https://datausa.io/api/data";
     private static final String DRILLDOWNS = "State";
     private static final String MEASURES = "Population";
     private static final String YEAR = "latest";
@@ -34,7 +34,7 @@ public class DataUsaApiClient {
     }
 
     public String getResponse() {
-        URI uri = UriComponentsBuilder.fromHttpUrl(DATAUSAAPIENDPOINT)
+        URI uri = UriComponentsBuilder.fromHttpUrl(DATA_USA_API_ENDPOINT)
                 .queryParam("drilldowns", DRILLDOWNS)
                 .queryParam("measures", MEASURES)
                 .queryParam("year", YEAR)
