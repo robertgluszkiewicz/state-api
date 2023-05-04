@@ -10,10 +10,10 @@ import java.time.Instant;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
     @ExceptionHandler(DataUsaApiException.class)
-    @ResponseStatus(HttpStatus.OK)
+    @ResponseStatus(HttpStatus.SERVICE_UNAVAILABLE)
     public ErrorMessage dataUsaApiExceptionHandler(DataUsaApiException ex) {
         return new ErrorMessage(
-                HttpStatus.OK.value(),
+                HttpStatus.SERVICE_UNAVAILABLE.value(),
                 ex.getMessage(),
                 Instant.now().getEpochSecond()
         );
