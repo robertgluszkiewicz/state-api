@@ -24,7 +24,7 @@ public class GlobalExceptionHandler {
     public ErrorMessage internalExceptionHandler(RuntimeException ex) {
         return new ErrorMessage(
                 HttpStatus.INTERNAL_SERVER_ERROR.value(),
-                ex.getMessage(),
+                "Internal server error",
                 Instant.now().getEpochSecond()
         );
     }
