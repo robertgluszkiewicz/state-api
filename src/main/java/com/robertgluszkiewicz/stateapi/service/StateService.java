@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.robertgluszkiewicz.stateapi.domain.ApiStateDto;
+import com.robertgluszkiewicz.stateapi.dto.ApiStateDto;
 import com.robertgluszkiewicz.stateapi.domain.State;
 import com.robertgluszkiewicz.stateapi.mapper.StateMapper;
 import com.robertgluszkiewicz.stateapi.repository.StateRepository;

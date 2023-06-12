@@ -5,8 +5,8 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
-import com.robertgluszkiewicz.stateapi.domain.ApiStateDto;
-import com.robertgluszkiewicz.stateapi.domain.DataUsaStateDto;
+import com.robertgluszkiewicz.stateapi.dto.ApiStateDto;
+import com.robertgluszkiewicz.stateapi.dto.DataUsaStateDto;
 import com.robertgluszkiewicz.stateapi.domain.State;
 
 @Service

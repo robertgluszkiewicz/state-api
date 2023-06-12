@@ -14,7 +14,7 @@ import java.util.List;
 
 import static org.mockito.Mockito.when;
 
-import com.robertgluszkiewicz.stateapi.domain.ApiStateDto;
+import com.robertgluszkiewicz.stateapi.dto.ApiStateDto;
 import com.robertgluszkiewicz.stateapi.service.StateService;
 
 @SpringJUnitWebConfig

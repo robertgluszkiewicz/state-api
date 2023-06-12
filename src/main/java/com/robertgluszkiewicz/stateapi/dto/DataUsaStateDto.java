@@ -1,4 +1,4 @@
-package com.robertgluszkiewicz.stateapi.domain;
+package com.robertgluszkiewicz.stateapi.dto;
 
 public class DataUsaStateDto {
     private String id;

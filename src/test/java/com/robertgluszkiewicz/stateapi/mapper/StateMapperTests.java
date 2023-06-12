@@ -6,8 +6,8 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import com.robertgluszkiewicz.stateapi.domain.ApiStateDto;
-import com.robertgluszkiewicz.stateapi.domain.DataUsaStateDto;
+import com.robertgluszkiewicz.stateapi.dto.ApiStateDto;
+import com.robertgluszkiewicz.stateapi.dto.DataUsaStateDto;
 import com.robertgluszkiewicz.stateapi.domain.State;
 
 public class StateMapperTests {

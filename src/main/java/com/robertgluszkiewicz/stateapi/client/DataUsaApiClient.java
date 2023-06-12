@@ -14,7 +14,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.robertgluszkiewicz.stateapi.domain.DataUsaStateDto;
+import com.robertgluszkiewicz.stateapi.dto.DataUsaStateDto;
 
 @Component
 public class DataUsaApiClient {
@@ -32,7 +32,7 @@ public class DataUsaApiClient {
         this.objectMapper = objectMapper;
     }
 
-    public String getResponse() {
+    private String getResponse() {
         URI uri = UriComponentsBuilder.fromHttpUrl(DATA_USA_API_ENDPOINT)
                 .queryParam("drilldowns", DRILLDOWNS)
                 .queryParam("measures", MEASURES)
